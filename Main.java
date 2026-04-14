@@ -1,40 +1,26 @@
+import java.util.Hashtable;
+
 class Main {
   public static void main(String[] args) {
+    // Use the instructions in Blackboard or instructions.md to complete Lab 6
+    Hashtable<String, Integer> creditHours = new Hashtable<>(9);
+    creditHours.put("IT-1025", 3);
+    creditHours.put("IT-1050", 3);
+    creditHours.put("IT-1150", 3);
+    creditHours.put("IT-2310", 3);
+    creditHours.put("IT-2320", 4);
+    creditHours.put("IT-2351", 4);
+    creditHours.put("IT-2650", 4);
+    creditHours.put("IT-2660", 4);
+    creditHours.put("IT-2030", 4);
 
-    // Step 1 - Create a BST tree object called lab5Tree
-BST lab5tree = new BST();
-    // Step 2 - Insert the following values: 13, 22, 36, 5, 48, 17, 39, 2, 26, 40, 29, 34, 10
-lab5tree.insert(13);
-lab5tree.insert(22);
-lab5tree.insert(36);
-lab5tree.insert(5);
-lab5tree.insert(48);
-lab5tree.insert(17);
-lab5tree.insert(39);
-lab5tree.insert(2);
-lab5tree.insert(26);
-lab5tree.insert(40);
-lab5tree.insert(29);
-lab5tree.insert(34);
-lab5tree.insert(10);
-    // Step 3 - Delete the value 17
-lab5tree.delete(17);
-    // Step 4 - Traverse and output the values using inorder (sorted)
-System.out.println("\nIn Order: ");
-    lab5tree.inorder();
-    // Step 5 - Traverse and output the values using postorder
-System.out.println("\nPost Order: ");
-    lab5tree.postorder();
-    // Step 6 - Traverse and output the values using preorder
-System.out.println("\nPre Order: ");
-    lab5tree.preorder();
-    // Step 7 - Display the result of a search for the value 36
-System.out.println("Is there 36? " + lab5tree.search(36));
-    // Step 8 - Display the result of a search for the value 37
-System.out.println("Is there 37? " + lab5tree.search(37));
-    // Step 9 - Using the path() method, display the path from the root to 2
-System.out.println("The path to 2 " + lab5tree.path(2));
-    // Step 10 - Display the path from the root to 34
-System.out.println("The path to 34 " + lab5tree.path(34));
+    System.out.println(creditHours.containsKey("IT-1025"));
+     System.out.println(creditHours.containsKey("IT-2110")); 
+
+    for(String key : creditHours.keySet())
+    {
+      System.out.println(creditHours.getKey() + " " + creditHours.getValue());
+    }
+    
   }
 }
